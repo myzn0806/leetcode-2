@@ -19,3 +19,24 @@ pwwkew -> wke 3
 - 入力される文字列の考慮（s consists of English letters, digits, symbols and spaces.）
 
 ブランクの時にどのように扱えばいいのかがわからず、ブランクの理解、また自分で書いたコードの理解ができていない
+現時点でのソース
+```python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        left=0
+        seen=[]
+        max_len=0
+        while left < len(s):
+            right=0
+            target_str=s[left:]
+            while right < len(target_str):
+                c=target_str[right]
+                if c in seen:
+                    max_len=max(max_len, len(seen))
+                    break
+                seen.append(c)
+                right+=1
+            left+=1
+            seen.clear()
+        return max_len
+```

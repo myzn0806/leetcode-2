@@ -40,3 +40,8 @@ class Solution:
             seen.clear()
         return max_len
 ```
+
+参考にしたPR
+https://github.com/hayashi-ay/leetcode/pull/47/changes#diff-eaf04e4839867b1c256a01b37e3fd908cd889582123148e5910d72e4e4fcb421R87-R99
+https://github.com/garunitule/coding_practice/pull/47/changes
+https://github.com/h1rosaka/arai60/pull/49/changes
